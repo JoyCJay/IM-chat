@@ -17,7 +17,7 @@ app.get('/messages', (req, res) =>{
     res.send(messages)
 })
 
-app.post('/messages', (req, res) =>{
+app.post('/message', (req, res) =>{
     messages.push(req.body)
     io.emit('message', req.body)
     res.sendStatus(200)
